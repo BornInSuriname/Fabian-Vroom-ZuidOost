@@ -1,27 +1,61 @@
 <!doctype html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gelijke stad, gelijke standaard · Fabian Vroom · BIJ1 Zuidoost</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Fabian Vroom – BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026."
-    />
-    <meta name="robots" content="index,follow" />
+  <!-- TITLE: exact uit je verslag -->
+  <title>Gelijke stad, gelijke standaard · Fabian Vroom · BIJ1 Zuidoost</title>
 
-    <!-- Tailwind via CDN (werkt op GitHub Pages) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- BASIC SEO: exact uit je verslag (samengevat, geen nieuwe feiten) -->
+  <meta
+    name="description"
+    content="Gelijke stad, gelijke standaard: Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Fabian Vroom – BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026."
+  />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#000000" />
 
-    <!-- Lucide icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- CANONICAL + URL: PAS AAN naar jouw echte GitHub Pages URL -->
+  <link rel="canonical" href="https://borninsuriname.github.io/Fabian-Zuidoost/" />
 
-    <style>
-      :root { --navOffset: 72px; }
-      ::selection { background: #facc15; color: #000; }
-      html { scroll-behavior: smooth; }
-    </style>
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="BIJ1 Amsterdam Zuidoost" />
+  <meta property="og:title" content="Gelijke stad, gelijke standaard · Fabian Vroom" />
+  <meta
+    property="og:description"
+    content="Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Fabian Vroom – BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026."
+  />
+  <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Zuidoost/" />
+  <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Gelijke stad, gelijke standaard · Fabian Vroom" />
+
+  <!-- TWITTER / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gelijke stad, gelijke standaard · Fabian Vroom" />
+  <meta
+    name="twitter:description"
+    content="Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Verkiezingen: 18 maart 2026."
+  />
+  <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Zuidoost/og-image.jpg" />
+
+  <!-- FAVICON (optioneel): zet favicon.png naast index.html -->
+  <link rel="icon" href="favicon.png" />
+
+  <!-- Tailwind via CDN (GitHub Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root { --navOffset: 72px; }
+    ::selection { background: #facc15; color: #000; }
+    html { scroll-behavior: smooth; }
+  </style>
   </head>
 
   <body class="min-h-screen bg-neutral-50 text-neutral-900 font-sans">
@@ -340,31 +374,50 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- STEMINFO (AANGEPAST AAN VERSLAG) -->
     <section id="stemmen" class="py-16 bg-yellow-400 text-black">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-black text-white p-8 md:p-12 relative overflow-hidden shadow-2xl">
-          <div class="relative z-10">
-            <h3 class="text-3xl font-bold mb-4 flex items-center gap-3">
-              <span class="bg-yellow-400 text-black px-2 py-1 text-sm font-bold uppercase">18 maart 2026</span>
-              Stem voor resultaat. Stem voor uitvoering.
-            </h3>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-black text-white p-8 md:p-12 relative overflow-hidden shadow-2xl">
+      <div class="relative z-10">
+        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3">
+          <span class="bg-yellow-400 text-black px-2 py-1 text-sm font-bold uppercase">Wist je dat</span>
+          Stemrecht in Amsterdam
+        </h3>
 
-            <div class="space-y-3 text-neutral-200">
-              <p>Op 18 maart 2026 kiest Amsterdam Zuidoost een nieuwe stadsdeelcommissie.</p>
-              <p>Ga stemmen en kies BIJ1 in Zuidoost.</p>
-              <p><strong>Stem op Fabian Vroom, #3 op lijst BIJ1.</strong></p>
-              <p>Stem voor resultaat.</p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-yellow-400 mb-2">Stadsdeelcommissie</h4>
+            <ul class="space-y-2 text-sm md:text-base text-neutral-200">
+              <li>Vanaf <strong>16 jaar</strong>.</li>
+              <li>Niet-EU: minimaal <strong>2 jaar</strong> onafgebroken ingeschreven in Nederland.</li>
+            </ul>
           </div>
 
-          <div class="absolute -right-10 -bottom-10 opacity-10">
-            <i data-lucide="map-pin" class="w-48 h-48"></i>
+          <div>
+            <h4 class="font-bold text-yellow-400 mb-2">Gemeenteraad</h4>
+            <ul class="space-y-2 text-sm md:text-base text-neutral-200">
+              <li>Vanaf <strong>18 jaar</strong>.</li>
+              <li>Niet-EU: minimaal <strong>5 jaar</strong> onafgebroken ingeschreven in Nederland.</li>
+            </ul>
           </div>
         </div>
+
+        <p class="mt-6 text-sm text-neutral-300">
+          Geen Nederlandse nationaliteit: EU-burger mag stemmen bij inschrijving in de gemeente. Niet-EU: zie de voorwaarden hierboven.
+        </p>
+
+        <div class="mt-8 inline-block border border-white/15 px-6 py-4">
+          <p class="text-xl md:text-2xl font-extrabold">
+            Stem BIJ1, lijst <span class="text-yellow-400">8</span>.
+          </p>
+          <p class="text-neutral-200 font-bold">Voor alle mensen.</p>
+        </div>
       </div>
+
+      <div class="absolute -right-10 -bottom-10 opacity-10">
+        <i data-lucide="map-pin" class="w-48 h-48"></i>
+      </div>
+    </div>
+  </div>
     </section>
 
     <!-- FOOTER -->
