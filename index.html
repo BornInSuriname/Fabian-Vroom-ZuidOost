@@ -1,351 +1,414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabian Vroom · BIJ1 · Zuidoost telt mee</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabian Vroom · BIJ1 Amsterdam Zuidoost</title>
+
+    <meta name="description" content="Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren. Fabian Vroom – BIJ1, Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen 18 maart 2026." />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Tailwind via CDN (werkt prima op GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-            background: #fef9e6; /* warme lichte tint */
-            color: #1e1e1e;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-
-        /* header */
-        .hero {
-            background: #000000; /* BIJ1 zwart */
-            color: #f9e55b; /* BIJ1 geel */
-            padding: 2rem 1.5rem;
-            border-radius: 0 0 2rem 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.3);
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            text-transform: uppercase;
-        }
-
-        .hero h1 span {
-            color: white;
-        }
-
-        .hero .subhead {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-top: 0.5rem;
-            color: #f9e55b;
-            border-left: 5px solid #f9e55b;
-            padding-left: 1rem;
-        }
-
-        .hero .verkiezingsdatum {
-            background: #f9e55b;
-            color: #000;
-            display: inline-block;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 700;
-            margin-top: 1rem;
-            font-size: 1.2rem;
-        }
-
-        /* secties */
-        section {
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
-            border: 1px solid #f0e6cc;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1.25rem;
-            border-bottom: 4px solid #f9e55b;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 1.5rem 0 1rem;
-            color: #1e1e1e;
-        }
-
-        .kompas-quote {
-            background: #f9f3e0;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            font-style: italic;
-            margin: 1.5rem 0;
-            border-left: 8px solid #000;
-        }
-
-        .plan-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
-            margin: 2rem 0 1rem;
-        }
-
-        .card {
-            background: #fcf8f0;
-            border-radius: 1.8rem;
-            padding: 1.8rem;
-            border: 1px solid #e6d7b2;
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 18px -8px rgba(0,0,0,0.1);
-        }
-
-        .card h4 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: #000;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card h4::before {
-            content: "●";
-            color: #f9e55b;
-            font-size: 2rem;
-        }
-
-        .card p {
-            margin-bottom: 0.8rem;
-        }
-
-        .highlight {
-            background: #f9e55b;
-            color: #000;
-            font-weight: 600;
-            padding: 0.2rem 0.4rem;
-            display: inline-block;
-            border-radius: 6px;
-        }
-
-        .cijferlijst {
-            background: #000;
-            color: white;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .cijferlijst p {
-            font-size: 1.3rem;
-        }
-
-        .button-achtig {
-            background: #f9e55b;
-            color: #000;
-            font-weight: 700;
-            padding: 0.75rem 2rem;
-            border-radius: 60px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 1rem;
-            border: 2px solid #000;
-            font-size: 1.2rem;
-        }
-
-        .button-achtig:hover {
-            background: #ffea7a;
-        }
-
-        footer {
-            background: #000;
-            color: white;
-            border-radius: 2rem 2rem 0 0;
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        footer h3 {
-            color: #f9e55b;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .steminfo {
-            background: #1e1e1e;
-            padding: 1.8rem;
-            border-radius: 2rem;
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .steminfo p {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .lijst-roep {
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: #f9e55b;
-            margin: 1.5rem 0 0.5rem;
-        }
-
-        .small-note {
-            opacity: 0.8;
-            font-size: 1rem;
-        }
-
-        hr {
-            border: 1px solid #f9e55b;
-            margin: 2rem 0;
-            width: 120px;
-            margin-left: 0;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-        }
+      :root { --navOffset: 72px; }
+      ::selection { background: #facc15; color: #000; }
+      html { scroll-behavior: smooth; }
     </style>
-</head>
-<body>
-    <div class="hero">
-        <div class="container" style="padding:0;">
-            <h1>Gelijke stad, gelijke standaard <span>· Zuidoost telt mee</span></h1>
-            <div class="subhead">Resultaat in uitvoering dat je kunt controleren</div>
-            <div class="verkiezingsdatum">Verkiezing Stadsdeelcommissie · 18 maart 2026</div>
+  </head>
+
+  <body class="min-h-screen bg-neutral-50 text-neutral-900 font-sans">
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-black text-white z-50 border-b border-yellow-400">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <button
+            type="button"
+            class="flex items-center gap-2 font-bold text-xl tracking-tighter"
+            data-scroll="home"
+            aria-label="Ga naar start"
+          >
+            <span class="text-yellow-400">BIJ1</span>
+            <span>ZUIDOOST</span>
+          </button>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex space-x-8 font-medium">
+            <button type="button" class="hover:text-yellow-400 transition-colors" data-scroll="home">Start</button>
+            <button type="button" class="hover:text-yellow-400 transition-colors" data-scroll="over-mij">Over mij</button>
+            <button type="button" class="hover:text-yellow-400 transition-colors" data-scroll="plannen">Mijn plan</button>
+            <button type="button" class="bg-yellow-400 text-black px-4 py-2 rounded-none font-bold hover:bg-white transition-colors uppercase text-sm tracking-wide" data-scroll="stemmen">
+              Steminfo
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              id="menuBtn"
+              class="text-white hover:text-yellow-400"
+              aria-label="Menu"
+              aria-expanded="false"
+            >
+              <span id="menuIconOpen" class="inline-block"><i data-lucide="menu"></i></span>
+              <span id="menuIconClose" class="hidden"><i data-lucide="x"></i></span>
+            </button>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <main class="container">
-        <!-- intro met naam en functie -->
-        <section>
-            <h2>🧑‍🏫 Fabian Vroom – BIJ1</h2>
-            <p style="font-size:1.3rem; margin-bottom:1rem;"><strong>Kandidaat Stadsdeelcommissie Amsterdam Zuidoost · lijst BIJ1 (nr. 3)</strong></p>
-            <p>Als trambestuurder bij GVB zie ik de stad door de ogen van reizigers. Ik zie waar het goed gaat en waar mensen vastlopen. Binnen GVB zet ik die blik om in actie als voorzitter van het personeelsinitiatief Keti Koti Verbindt. Mijn principe is simpel: <strong>luisteren is de start, uitvoeren de norm.</strong></p>
-        </section>
+      <!-- Mobile dropdown -->
+      <div id="mobileMenu" class="hidden md:hidden bg-neutral-900 border-b border-yellow-400">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <button type="button" class="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-neutral-800" data-scroll="home">Start</button>
+          <button type="button" class="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-neutral-800" data-scroll="over-mij">Over mij</button>
+          <button type="button" class="block w-full text-left px-3 py-2 text-base font-medium text-white hover:bg-neutral-800" data-scroll="plannen">Mijn plan</button>
+          <button type="button" class="block w-full text-left px-3 py-2 text-base font-bold text-yellow-400 hover:bg-neutral-800" data-scroll="stemmen">Steminfo</button>
+        </div>
+      </div>
+    </nav>
 
-        <!-- kompas -->
-        <section>
-            <h2>🧭 Mijn kompas</h2>
-            <div class="kompas-quote">
-                <p style="font-size:1.4rem; font-weight:500;">“Bestaanszekerheid is geen theorie, het is ervaring.”</p>
+    <!-- HERO -->
+    <section id="home" class="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-black text-white overflow-hidden">
+      <div class="absolute top-0 right-0 w-1/3 h-full bg-yellow-400 opacity-10 skew-x-12 transform translate-x-20"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-yellow-400 text-black px-3 py-1 font-bold text-xs uppercase tracking-widest mb-6">
+              <i data-lucide="calendar" class="w-4 h-4"></i> 18 maart 2026
             </div>
-            <p>Sinds mijn 23e woon ik in Amsterdam Zuidoost, nadat ik met één koffer vanuit Suriname arriveerde. Ik weet hoe snel bestaanszekerheid kan wankelen. In 2010 raakte ik mijn woning kwijt – twee jaar lang sliep ik op banken, daarna zes jaar onderhuur. Zonder zekerheid. Ik zag hoe oude Surinaamse vrienden drugs verkochten in het centrum. Ik voelde hoe dun die lijn is. Toch bleef ik vechten via uitzendbureaus.</p>
-            <p style="margin-top:1rem;">In 2018 kreeg ik weer een woning op mijn naam. In 2023 werd ons zoontje geboren. Als vader zie ik de potentie van onze wijken én de gaten in voorzieningen. Mijn geschiedenis leerde mij hoe belangrijk zekerheid, kansen en steun zijn. Daarom ga ik de politiek in vanuit noodzaak: voor echte bestaanszekerheid, perspectief voor jongeren, zeggenschap en veilige buurten mét vertrouwen.</p>
-        </section>
 
-        <!-- plan: 3 toezeggingen -->
-        <section>
-            <h2>📋 Mijn concrete toezeggingen</h2>
-            <div class="plan-cards">
-                <!-- kaart 1: jongeren -->
-                <div class="card">
-                    <h4>Jongeren</h4>
-                    <p><span class="highlight">Sport:</span> hoogwaardige openbare sportplekken, veilig en tot 22.00 uur verlicht. Met duidelijk wijkbeheer, zodat ze schoon, heel en veilig blijven.</p>
-                    <p><span class="highlight">Wonen:</span> jongeren en starters uit Zuidoost moeten hier kunnen blijven. Ik gebruik mijn adviesrecht maximaal: negatief advies op plannen zonder <strong>stadsdeelvoorrang</strong>. Waar mogelijk leggen we de maximale 25% vast voor bewoners met aantoonbare binding (woonduur). Dat wordt meetbaar in projectafspraken.</p>
-                </div>
-                <!-- kaart 2: buurthuizen -->
-                <div class="card">
-                    <h4>Buurthuizen</h4>
-                    <p><strong>Sociale infrastructuur die de wijk sterker en veiliger maakt.</strong> Huiswerkbegeleiding, sport en ontmoeting.</p>
-                    <p>✅ <strong>Status:</strong> erkend als basisvoorziening, structureel gefinancierd.<br>
-                       ✅ <strong>Toegang:</strong> zeven dagen per week open, tot 22.00 uur.<br>
-                       ✅ <strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering; gemeente zorgt voor continuïteit.</p>
-                </div>
-                <!-- kaart 3: zeggenschap -->
-                <div class="card">
-                    <h4>Zeggenschap</h4>
-                    <p><span class="highlight">Kwaliteit:</span> meetbare normen voor onderhoud en veiligheid, sturen op data én meldingen. Preventief onderhoud.</p>
-                    <p><span class="highlight">Wijkbudget €50.000 per jaar</span> met mandaat voor bewoners. Zij beslissen zelfstandig over besteding in hun eigen straat. Eigenaarschap in de praktijk.</p>
-                </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-none mb-6">
+              Gelijke stad.<br />
+              <span class="text-yellow-400">Gelijke standaard.</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-neutral-300 mb-8 font-light max-w-lg">
+              Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button type="button" data-scroll="plannen"
+                class="bg-yellow-400 text-black px-8 py-4 font-bold text-lg hover:bg-white transition-all flex items-center justify-center gap-2 group">
+                Bekijk de plannen
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+
+              <div class="px-8 py-4 border border-white/20 text-white font-medium flex flex-col justify-center">
+                <span class="text-xs uppercase text-neutral-400">Kandidaat</span>
+                <span class="text-lg font-bold">Fabian Vroom</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- waarom BIJ1 -->
-        <section>
-            <h2>💛 Waarom BIJ1</h2>
-            <p>Voor mij is BIJ1 de partij die eerlijk benoemt wat er scheef zit en werkt aan herstel. Ik kies voor BIJ1 omdat de partij consequent opkomt voor gelijkwaardigheid en bestaanszekerheid. BIJ1 staat voor:</p>
-            <ul style="margin:1rem 0 1rem 2rem; font-size:1.1rem;">
-                <li>Wonen en zorg voor mensen, niet voor winst.</li>
-                <li>Gratis openbaar vervoer.</li>
-                <li>Een stad waar racisme en discriminatie geen ruimte krijgen.</li>
-                <li>Structurele steun aan bewonerscollectieven, zodat wijkkracht groeit en blijft.</li>
+          <!-- Image -->
+          <div class="relative">
+            <div class="aspect-[4/5] bg-neutral-800 relative overflow-hidden border-2 border-yellow-400 shadow-[10px_10px_0px_0px_rgba(250,204,21,1)]">
+              <!-- Fallback -->
+              <div id="imgFallback" class="absolute inset-0 flex items-center justify-center bg-neutral-800">
+                <div class="text-center p-8">
+                  <i data-lucide="users" class="w-16 h-16 mx-auto text-neutral-600 mb-4"></i>
+                  <p class="text-neutral-500 font-bold uppercase tracking-widest">Foto Fabian Vroom</p>
+                  <p class="text-neutral-600 text-xs mt-2">
+                    Zet je foto als <span class="font-mono">fabian.jpg</span> naast dit <span class="font-mono">index.html</span>
+                  </p>
+                </div>
+              </div>
+
+              <img
+                id="heroImg"
+                src="fabian.jpg"
+                alt="Fabian Vroom"
+                class="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+              />
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 bg-white text-black p-4 shadow-lg max-w-xs">
+              <p class="font-bold text-sm">#3 Lijst BIJ1</p>
+              <p class="text-xs text-neutral-600">Stadsdeelcommissie Zuidoost</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVER MIJ -->
+    <section id="over-mij" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold mb-4 tracking-tight">
+            Van trambestuurder tot
+            <span class="underline decoration-yellow-400 decoration-4 underline-offset-4"> volksvertegenwoordiger</span>
+          </h2>
+        </div>
+
+        <div class="text-neutral-700">
+          <p class="text-xl font-medium leading-relaxed mb-8 border-l-4 border-black pl-6">
+            “Mijn principe is simpel: luisteren is de start, uitvoeren de norm.”
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <i data-lucide="tram-front" class="w-5 h-5 text-yellow-500"></i> De werkvloer
+              </h3>
+              <p class="mb-6 leading-relaxed">
+                Als trambestuurder bij GVB zie ik de stad door de ogen van reizigers. Ik zie waar het werkt en waar mensen vastlopen.
+                Die blik zet ik om in actie als voorzitter van <strong>Keti Koti Verbindt</strong>, waar we werken aan sociale veiligheid en historisch bewustzijn.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                <i data-lucide="home" class="w-5 h-5 text-yellow-500"></i> Bestaanszekerheid
+              </h3>
+              <p class="mb-6 leading-relaxed">
+                Sinds mijn 23e woon ik in Zuidoost. Ik weet hoe snel zekerheid kan wankelen. Na het verliezen van mijn woning sliep ik twee jaar op banken en huurde ik zes jaar in onderhuur.
+                Nu, als vader, kijk ik naar de potentie van onze wijken én naar wat ontbreekt in voorzieningen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANNEN -->
+    <section id="plannen" class="py-20 bg-neutral-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-4">Mijn plan: drie concrete toezeggingen</h2>
+          <p class="text-lg text-neutral-600">Meetbaar resultaat voor jongeren, buurten en zeggenschap.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 border-b-4 border-black shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-yellow-400 w-12 h-12 flex items-center justify-center rounded-full mb-6 font-bold text-xl">1</div>
+            <h3 class="text-2xl font-bold mb-4">Jongeren & ruimte</h3>
+            <ul class="space-y-4">
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Sport:</strong> hoogwaardige sportplekken, verlicht tot 22:00 uur en veilig.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Wonen:</strong> negatief advies bij bouwplannen zonder stadsdeelvoorrang.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Voorrang:</strong> maximaal 25% voor bewoners met binding in Zuidoost.</span>
+              </li>
             </ul>
-            <p>Deze keuzes passen bij Amsterdam Zuidoost en bij mijn koers. Ik geloof in politiek die je kunt controleren en die tot concrete resultaten leidt.</p>
-        </section>
+          </div>
 
-        <!-- afsluitende oproep + steminfo extra -->
-        <section>
-            <h2>🗳️ Stem voor resultaat · 18 maart 2026</h2>
-            <p style="font-size:1.3rem;">Zuidoost verdient vertegenwoordigers die hier wonen, van de buurt houden en verantwoordelijkheid nemen. Ik wil zo'n vertegenwoordiger zijn.</p>
-            <div style="background: #f9e55b; padding: 1.2rem; border-radius: 2rem; margin: 1.8rem 0;">
-                <p style="font-size:1.8rem; font-weight:800; color:#000;">Stem op Fabian Vroom · #3 op lijst BIJ1</p>
-                <p style="font-size:1.3rem; font-weight:500;">(lijst 5 voor de gemeenteraad – maar nú gaat het om de stadsdeelcommissie)</p>
+          <div class="bg-white p-8 border-b-4 border-black shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-yellow-400 w-12 h-12 flex items-center justify-center rounded-full mb-6 font-bold text-xl">2</div>
+            <h3 class="text-2xl font-bold mb-4">Buurthuizen</h3>
+            <ul class="space-y-4">
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Status:</strong> erkend als basisvoorziening met structurele financiering.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Toegang:</strong> 7 dagen per week open, ook in de avond tot 22:00 uur.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Inhoud:</strong> bewoners bepalen de programmering.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 border-b-4 border-black shadow-sm hover:shadow-md transition-shadow">
+            <div class="bg-yellow-400 w-12 h-12 flex items-center justify-center rounded-full mb-6 font-bold text-xl">3</div>
+            <h3 class="text-2xl font-bold mb-4">Echte zeggenschap</h3>
+            <ul class="space-y-4">
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Kwaliteit:</strong> meetbare normen voor onderhoud en veiligheid.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Budget:</strong> wijkbudget van €50.000 met mandaat voor bewoners.</span>
+              </li>
+              <li class="flex gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+                <span class="text-sm"><strong>Beslissen:</strong> bewoners beslissen over hun eigen straat.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAAROM BIJ1 -->
+    <section class="py-20 bg-black text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-start gap-12">
+          <div class="md:w-1/3">
+            <h2 class="text-4xl font-bold mb-6 text-yellow-400">Waarom BIJ1?</h2>
+            <p class="text-neutral-400">Gelijkwaardigheid en bestaanszekerheid als vaste lijn.</p>
+          </div>
+
+          <div class="md:w-2/3">
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <i data-lucide="megaphone" class="w-6 h-6 text-yellow-400"></i>
+                <p>Wonen en zorg voor mensen.</p>
+              </div>
+              <div class="flex gap-4">
+                <i data-lucide="megaphone" class="w-6 h-6 text-yellow-400"></i>
+                <p>Gratis openbaar vervoer.</p>
+              </div>
+              <div class="flex gap-4">
+                <i data-lucide="megaphone" class="w-6 h-6 text-yellow-400"></i>
+                <p>Een stad waar racisme en discriminatie geen ruimte krijgen.</p>
+              </div>
+              <div class="flex gap-4">
+                <i data-lucide="megaphone" class="w-6 h-6 text-yellow-400"></i>
+                <p>Structurele steun aan bewonerscollectieven voor blijvende wijkkracht.</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- extra wervende tekst uit document -->
-            <p><strong>Stem voor resultaat. Stem voor uitvoering.</strong></p>
-            <hr>
-            <!-- Wist je dat... toegevoegd -->
-            <div style="background: #eae3d1; border-radius: 1.5rem; padding: 1.5rem; margin-top: 1.5rem;">
-                <p style="font-size:1.4rem; font-weight:bold;">📢 Wist je dat?</p>
-                <ul style="font-size:1.2rem; list-style-type: '✓   '; margin-left: 1.5rem;">
-                    <li>Je vanaf 16 jaar mag stemmen voor de stadsdeelcommissie.</li>
-                    <li>Je vanaf 18 jaar mag stemmen voor de gemeenteraad.</li>
-                    <li><strong>Geen Nederlands paspoort?</strong> Je mag stemmen als je EU-burger bent, of als niet-EU-burger minimaal 5 jaar legaal in Nederland woont.</li>
+    <!-- STEMINFO (HERZIEN) -->
+    <section id="stemmen" class="py-16 bg-yellow-400 text-black">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-black text-white p-8 md:p-12 relative overflow-hidden shadow-2xl">
+          <div class="relative z-10">
+            <h3 class="text-3xl font-bold mb-4 flex items-center gap-3">
+              <span class="bg-yellow-400 text-black px-2 py-1 text-sm font-bold uppercase">Info</span>
+              Mag jij stemmen op 18 maart 2026?
+            </h3>
+
+            <p class="text-neutral-300 mb-8 text-sm md:text-base">
+              Er zijn 2 verkiezingen: gemeenteraad (heel Amsterdam) en stadsdeelcommissie (per stadsdeel).
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-bold text-yellow-400 mb-2">Stadsdeelcommissie (Amsterdam)</h4>
+                <ul class="space-y-2 text-sm md:text-base">
+                  <li>Leeftijd: vanaf <strong>16 jaar</strong>.</li>
+                  <li>EU-burger: je mag stemmen als je in Amsterdam staat ingeschreven.</li>
+                  <li>Niet-EU: je mag stemmen als je <strong>minstens 2 jaar</strong> legaal en onafgebroken in Nederland verblijft.</li>
                 </ul>
-                <p style="font-size:1.5rem; font-weight:800; margin-top:1rem;">Stem BIJ1, lijst 5. Voor alle mensen.</p>
+
+                <p class="text-neutral-400 mt-3 text-xs">
+                  Bron: <a class="underline hover:text-yellow-400" target="_blank" rel="noreferrer"
+                    href="https://lokaleregelgeving.overheid.nl/CVDR673560">lokaleregelgeving.overheid.nl (Amsterdam)</a>
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-yellow-400 mb-2">Gemeenteraad</h4>
+                <ul class="space-y-2 text-sm md:text-base">
+                  <li>Leeftijd: vanaf <strong>18 jaar</strong>.</li>
+                  <li>EU-burger: je mag stemmen als je in een Nederlandse gemeente staat ingeschreven.</li>
+                  <li>Niet-EU: je mag stemmen als je <strong>minstens 5 jaar</strong> legaal en onafgebroken in Nederland verblijft (met geldige verblijfstitel).</li>
+                </ul>
+
+                <p class="text-neutral-400 mt-3 text-xs">
+                  Bron: <a class="underline hover:text-yellow-400" target="_blank" rel="noreferrer"
+                    href="https://www.kiesraad.nl/verkiezingen/gemeenteraden/stemmen/niet-nederlandse-inwoners">kiesraad.nl</a>
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- extra herhaling onderaan -->
-        <div class="cijferlijst">
-            <p>⚡ Fabian Vroom ⚡ #3 op de lijst voor de Stadsdeelcommissie Zuidoost.</p>
-            <p>📅 18 maart 2026 · breng je stem uit!</p>
+          <div class="absolute -right-10 -bottom-10 opacity-10">
+            <i data-lucide="map-pin" class="w-48 h-48"></i>
+          </div>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-        <h3>💛🖤 Gelijke stad, gelijke standaard</h3>
-        <div class="steminfo">
-            <p><strong>Stadsdeelcommissie:</strong> 16+ en iedereen die voldoet aan de kiesregels (EU + niet-EU 5 jaar legaal).</p>
-            <p><strong>Gemeenteraad:</strong> 18+ en zelfde voorwaarden.</p>
-            <p style="font-size:1.4rem; margin-top:1rem;">✨ Jouw stem telt in Zuidoost ✨</p>
+    <!-- FOOTER -->
+    <footer class="bg-neutral-900 text-white pt-16 pb-8 border-t border-neutral-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">
+          STEM <span class="text-yellow-400">BIJ1</span>, LIJST 5
+        </h2>
+        <p class="text-xl md:text-2xl font-light mb-12">Voor alle mensen.</p>
+
+        <div class="inline-block border border-neutral-700 p-6 rounded-lg bg-neutral-800/50">
+          <p class="font-bold text-lg mb-1">Fabian Vroom</p>
+          <p class="text-neutral-400">#3 Kandidaat Stadsdeelcommissie Zuidoost</p>
+          <p class="text-yellow-400 mt-2 font-bold">18 maart 2026</p>
         </div>
-        <div class="lijst-roep">BIJ1 · LIJST 5</div>
-        <p style="font-size:1.3rem; margin: 0.5rem 0;">Fabian Vroom · kandidaat nr. 3</p>
-        <p class="small-note">Campagne voor de verkiezingen van 18 maart 2026 · Amsterdam Zuidoost</p>
-        <p style="margin-top:1.5rem;">💪 <strong>Stem voor resultaat – stem voor uitvoering</strong></p>
+
+        <div class="mt-16 pt-8 border-t border-neutral-800 text-neutral-500 text-sm">
+          <p>&copy; 2026 Campagne Fabian Vroom - BIJ1 Amsterdam Zuidoost.</p>
+        </div>
+      </div>
     </footer>
-</body>
-</html>
+
+    <script>
+      // Icons
+      lucide.createIcons();
+
+      const NAV_OFFSET = 72;
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuBtn = document.getElementById("menuBtn");
+      const iconOpen = document.getElementById("menuIconOpen");
+      const iconClose = document.getElementById("menuIconClose");
+
+      function setMenu(open) {
+        mobileMenu.classList.toggle("hidden", !open);
+        iconOpen.classList.toggle("hidden", open);
+        iconClose.classList.toggle("hidden", !open);
+        menuBtn.setAttribute("aria-expanded", String(open));
+        document.body.style.overflow = open ? "hidden" : "";
+      }
+
+      // Toggle menu
+      menuBtn.addEventListener("click", () => {
+        const open = mobileMenu.classList.contains("hidden");
+        setMenu(open);
+      });
+
+      // ESC closes menu
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setMenu(false);
+      });
+
+      // Close menu on desktop width
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) setMenu(false);
+      });
+
+      // Smooth scroll with offset
+      function scrollToId(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+        window.scrollTo({ top, behavior: "smooth" });
+        setMenu(false);
+      }
+
+      document.querySelectorAll("[data-scroll]").forEach((btn) => {
+        btn.addEventListener("click", () => scrollToId(btn.getAttribute("data-scroll")));
+      });
+
+      // Image fallback
+      const img = document.getElementById("heroImg");
+      const fallback = document.getElementById("imgFallback");
+      img.addEventListener("error", () => {
+        img.style.display = "none";
+        fallback.style.display = "flex";
+      });
+      img.addEventListener("load", () => {
+        fallback.style.display = "none";
+      });
+    </script>
+  </body>
+                  </html>
