@@ -6,43 +6,49 @@
   <title>Fabian Vroom · BIJ1 Amsterdam Zuidoost</title>
 
   <!-- SEO -->
-  <meta name="description" content="Gelijke stad, gelijke standaard. Fabian Vroom – BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026." />
+  <meta name="description" content="Gelijke stad, gelijke standaard. Fabian Vroom - BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026." />
+  <meta name="author" content="Fabian Vroom" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/" />
 
-  <!-- Open Graph -->
+  <!-- Favicon (geen extra bestand nodig) -->
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="%23000"/><circle cx="32" cy="32" r="18" fill="%23facc15"/><text x="32" y="39" font-family="Arial" font-size="18" font-weight="700" text-anchor="middle" fill="%23000">BIJ1</text></svg>' />
+
+  <!-- Social / Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Fabian Vroom · BIJ1 Zuidoost" />
   <meta property="og:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost" />
   <meta property="og:description" content="Resultaat in uitvoering dat je kunt controleren. Verkiezingen: 18 maart 2026." />
   <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/" />
   <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/og-image.jpg" />
+  <meta property="og:image:alt" content="Fabian Vroom - BIJ1 Amsterdam Zuidoost" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Fabian Vroom – BIJ1 Amsterdam Zuidoost" />
+  <meta property="og:image:type" content="image/jpeg" />
 
-  <!-- Twitter -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost" />
   <meta name="twitter:description" content="Resultaat in uitvoering dat je kunt controleren. Verkiezingen: 18 maart 2026." />
   <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Fabian Vroom - BIJ1 Amsterdam Zuidoost" />
 
   <!-- UI -->
   <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="light" />
 
-  <!-- Preload portret -->
+  <!-- (Optioneel) preload van je portret -->
   <link rel="preload" as="image" href="assets/fabian.jpg" />
 
-  <!-- Structured data -->
+  <!-- Structured data (basis) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Fabian Vroom",
     "description": "Kandidaat Stadsdeelcommissie Amsterdam Zuidoost (BIJ1).",
-    "image": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/fabian.jpg",
-    "url": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/"
+    "url": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/",
+    "image": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/fabian.jpg"
   }
   </script>
 
@@ -58,9 +64,9 @@
       --border:#e5e5e5;
       --max: 1100px;
 
-      --r-sm: 6px;
-      --r-md: 10px;
-      --shadow: 0 12px 30px rgba(0,0,0,0.08);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+
       --focus: 0 0 0 3px rgba(250,204,21,0.55);
     }
 
@@ -72,20 +78,17 @@
       background:var(--bg);
       color:var(--text);
       line-height:1.55;
-      -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     ::selection{ background: var(--yellow); color: var(--black); }
-    [hidden]{ display:none !important; }
 
+    [hidden]{ display:none !important; }
     a{ color:inherit; text-decoration:none; }
     button{ font:inherit; cursor:pointer; }
     .container{ max-width: var(--max); margin:0 auto; padding:0 18px; }
 
-    p{ margin:0 0 14px; }
-    p:last-child{ margin-bottom:0; }
-
-    /* A11Y */
     .skip-link{
       position:absolute;
       left:-999px;
@@ -106,12 +109,12 @@
       z-index:999;
       outline:none;
       box-shadow: var(--focus);
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     :focus-visible{
       outline:none;
       box-shadow: var(--focus);
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior:auto; }
@@ -141,6 +144,7 @@
       letter-spacing:-0.02em;
       user-select:none;
       white-space:nowrap;
+      padding:10px 0;
     }
     .brand .bij1{ color:var(--yellow); }
 
@@ -148,13 +152,14 @@
       display:flex;
       align-items:center;
       gap:22px;
-      font-weight:700;
+      font-weight:650;
     }
     .nav-link{
       display:inline-flex;
       align-items:center;
       padding:10px 8px;
       opacity:0.95;
+      border-radius: var(--radius-sm);
     }
     .nav-link:hover{ color:var(--yellow); }
 
@@ -169,7 +174,7 @@
       font-size:12px;
       display:inline-flex;
       align-items:center;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     .nav-cta:hover{ background:var(--white); }
 
@@ -179,7 +184,7 @@
       border:0;
       color:var(--white);
       padding:10px;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
 
     .mobile-menu{
@@ -200,15 +205,13 @@
       text-align:left;
       color:var(--white);
       padding:12px 18px;
-      font-weight:900;
+      font-weight:850;
+      border-radius: var(--radius-sm);
     }
     .mobile-menu a:hover{ background:#1f1f1f; }
     .mobile-menu .cta{ color:var(--yellow); }
 
     /* HERO */
-    main{ display:block; }
-    section{ scroll-margin-top: 86px; }
-
     .hero{
       padding: 120px 0 76px;
       background:var(--black);
@@ -246,10 +249,10 @@
       letter-spacing:0.12em;
       font-size:12px;
       margin-bottom:18px;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     .hero h1{
-      margin:0 0 14px;
+      margin:0 0 16px;
       font-weight:950;
       letter-spacing:-0.04em;
       line-height:0.95;
@@ -257,11 +260,11 @@
     }
     .hero h1 .accent{ color:var(--yellow); }
     .hero p{
-      margin:0 0 22px;
+      margin:0 0 24px;
       color:#d4d4d4;
       font-size: clamp(18px, 2vw, 22px);
-      max-width: 600px;
-      font-weight:380;
+      max-width: 56ch;
+      font-weight:350;
     }
     .hero-actions{
       display:flex;
@@ -279,18 +282,23 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      transition: transform .15s ease, background .15s ease;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       user-select:none;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
+      white-space:nowrap;
     }
     .btn-primary{ background:var(--yellow); color:var(--black); }
     .btn-primary:hover{ background:var(--white); transform: translateY(-1px); }
-    .btn-ghost{
+
+    .btn-secondary{
       background:transparent;
       color:var(--white);
-      border:1px solid rgba(255,255,255,0.22);
+      border:1px solid rgba(255,255,255,0.25);
     }
-    .btn-ghost:hover{ border-color: rgba(250,204,21,0.65); color: var(--yellow); }
+    .btn-secondary:hover{
+      border-color: rgba(250,204,21,0.75);
+      transform: translateY(-1px);
+    }
 
     .pill{
       border:1px solid rgba(255,255,255,0.2);
@@ -299,26 +307,10 @@
       display:flex;
       flex-direction:column;
       justify-content:center;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     .pill .small{ color:#a3a3a3; text-transform:uppercase; letter-spacing:0.08em; font-size:11px; }
     .pill .big{ font-weight:950; font-size:18px; margin-top:2px; }
-
-    .kpis{
-      margin-top: 14px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .kpi{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 10px 12px;
-      border-radius: var(--r-sm);
-      min-width: 180px;
-    }
-    .kpi .k{ color:#a3a3a3; text-transform:uppercase; letter-spacing:0.10em; font-size:11px; }
-    .kpi .v{ margin-top:4px; font-weight:950; }
 
     .portrait{
       position:relative;
@@ -327,7 +319,7 @@
       border:2px solid var(--yellow);
       overflow:hidden;
       box-shadow: 10px 10px 0 0 rgba(250,204,21,1);
-      border-radius: var(--r-md);
+      border-radius: var(--radius-md);
     }
     .portrait img{
       width:100%;
@@ -335,11 +327,10 @@
       object-fit:cover;
       display:block;
     }
-    /* FIX: fallback niet standaard zichtbaar */
     .portrait .fallback{
       position:absolute;
       inset:0;
-      display:none;
+      display:flex;
       align-items:center;
       justify-content:center;
       padding:32px;
@@ -359,61 +350,63 @@
       padding:12px 14px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
       max-width: 260px;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-md);
     }
     .float-card .t1{ font-weight:950; font-size:13px; }
     .float-card .t2{ color:#525252; font-size:12px; margin-top:2px; }
 
-    /* SECTIONS */
+    main{ display:block; }
+    section{ scroll-margin-top: 86px; }
+
     .section{
       padding: 76px 0;
       background:var(--white);
     }
     .section.alt{ background:#f5f5f5; }
     .section h2{
-      margin:0 0 10px;
+      margin:0 0 12px;
       font-size: clamp(28px, 3vw, 40px);
       letter-spacing:-0.02em;
     }
     .section .lead{
       font-size: 18px;
       color: var(--muted);
-      margin: 0 0 26px;
-      max-width: 780px;
+      margin: 0 0 28px;
+      max-width: 80ch;
     }
     .quote{
-      margin: 22px 0 30px;
+      margin: 22px 0 34px;
       border-left:4px solid var(--black);
       padding: 10px 0 10px 16px;
       font-size: 18px;
       color:#404040;
-      font-weight:800;
+      font-weight:700;
+      max-width: 80ch;
     }
 
     .two-col{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      gap: 30px;
       margin-top: 18px;
     }
     .card{
       background:var(--white);
       border:1px solid var(--border);
       padding: 22px;
-      border-radius: var(--r-md);
-      box-shadow: 0 0 0 rgba(0,0,0,0);
+      border-radius: var(--radius-md);
     }
     .card h3{
       margin:0 0 10px;
       font-size: 18px;
       letter-spacing:-0.01em;
     }
-    .card p{ color:#404040; }
+    .card p{ margin:0; color:#2f2f2f; }
+    .card p + p{ margin-top: 12px; }
 
-    /* PLAN */
     .plan-header{
       text-align:center;
-      max-width: 820px;
+      max-width: 780px;
       margin:0 auto 34px;
     }
     .plan-grid{
@@ -423,13 +416,13 @@
     }
     .plan-card{
       background:var(--white);
-      border: 1px solid var(--border);
-      border-bottom: 5px solid var(--black);
+      border-bottom: 4px solid var(--black);
       padding: 22px;
+      border: 1px solid var(--border);
       transition: transform .12s ease, box-shadow .12s ease;
-      border-radius: var(--r-md);
+      border-radius: var(--radius-md);
     }
-    .plan-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+    .plan-card:hover{ transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
     .num{
       width:44px; height:44px;
       border-radius:999px;
@@ -448,18 +441,17 @@
     .bullets{
       margin:0;
       padding-left: 18px;
-      color:#404040;
+      color:#2f2f2f;
     }
     .bullets li{ margin: 10px 0; }
     .plan-note{
       margin-top: 12px;
       padding-top: 12px;
       border-top: 1px solid var(--border);
-      color:#111;
-      font-weight:900;
+      color:#2f2f2f;
+      font-weight:800;
     }
 
-    /* WHY */
     .why{
       background:var(--black);
       color:var(--white);
@@ -472,16 +464,15 @@
       align-items:start;
     }
     .why h2{ color:var(--yellow); margin:0 0 10px; }
-    .why p{ margin:0; color:#bdbdbd; }
+    .why p{ margin:0; color:#bdbdbd; max-width: 70ch; }
     .why ul{
       margin:0;
       padding-left: 18px;
       color:#e5e5e5;
-      font-weight:700;
+      font-weight:650;
     }
     .why li{ margin: 10px 0; }
 
-    /* STEMINFO */
     .stem{
       background:var(--yellow);
       color:var(--black);
@@ -494,7 +485,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.28);
       position:relative;
       overflow:hidden;
-      border-radius: var(--r-md);
+      border-radius: 14px;
     }
     .stem-box .label{
       display:inline-block;
@@ -507,7 +498,7 @@
       padding: 6px 8px;
       margin-right: 10px;
       vertical-align:middle;
-      border-radius: var(--r-sm);
+      border-radius: var(--radius-sm);
     }
     .stem-box h3{
       margin:0 0 18px;
@@ -524,7 +515,7 @@
       border:1px solid rgba(250,204,21,0.25);
       padding: 14px 16px;
       background: rgba(255,255,255,0.04);
-      border-radius: var(--r-md);
+      border-radius: 12px;
     }
     .stem-card h4{
       margin:0 0 8px;
@@ -536,15 +527,18 @@
     }
     .stem-card ul{ margin:0; padding-left: 18px; color:#e5e5e5; }
     .stem-card li{ margin: 8px 0; }
-
     .stem-note{
       margin-top: 14px;
       color:#d4d4d4;
       font-size: 13px;
       line-height: 1.45;
     }
+    .stem-note a{
+      color: var(--yellow);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
-    /* STEM-EXTRA */
     .stem-extra{
       margin-top: 16px;
       padding-top: 14px;
@@ -558,10 +552,13 @@
       font-size: 12px;
       margin: 0 0 10px;
     }
+    .stem-extra p{
+      margin: 0 0 10px;
+      color: #e5e5e5;
+    }
     .stem-extra .line{
       color: #d4d4d4;
       font-weight: 800;
-      margin: 0 0 10px;
     }
     .stem-questions{
       margin: 10px 0 0;
@@ -580,7 +577,6 @@
       font-weight: 800;
     }
 
-    /* FOOTER */
     footer{
       background:#111;
       color:var(--white);
@@ -595,7 +591,7 @@
       font-weight:950;
     }
     footer h2 .accent{ color:var(--yellow); }
-    footer .sub{ margin:0 0 26px; color:#d4d4d4; font-size: 18px; font-weight:380; }
+    footer .sub{ margin:0 0 26px; color:#d4d4d4; font-size: 18px; font-weight:350; }
 
     .footer-box{
       display:inline-block;
@@ -604,21 +600,20 @@
       background: rgba(255,255,255,0.04);
       text-align:left;
       max-width: 520px;
-      border-radius: var(--r-md);
+      border-radius: 14px;
     }
     .footer-box .name{ font-weight:950; font-size: 18px; }
     .footer-box .meta{ color:#bdbdbd; margin-top:2px; }
     .footer-box .date{ color:var(--yellow); margin-top:10px; font-weight:950; }
 
     .copy{
-      margin-top: 24px;
+      margin-top: 36px;
       padding-top: 18px;
       border-top: 1px solid #262626;
       color:#a3a3a3;
       font-size: 12px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px){
       .hero-grid{ grid-template-columns: 1fr; }
       .float-card{ left: 10px; bottom: 10px; }
@@ -632,20 +627,33 @@
       .menu-btn{ display:inline-flex; }
       .hero{ padding-top: 110px; }
     }
+
+    @media (prefers-color-scheme: dark){
+      body{ background:#0b0b0b; color:#f5f5f5; }
+      .section{ background:#0f0f0f; }
+      .section.alt{ background:#141414; }
+      .card, .plan-card{ background:#0f0f0f; border-color:#2a2a2a; }
+      .quote{ color:#e5e5e5; border-left-color: var(--yellow); }
+      .section .lead{ color:#cfcfcf; }
+      .card p, .bullets, .plan-note{ color:#eaeaea; }
+      .plan-note{ border-top-color:#2a2a2a; }
+      .float-card{ background:#0f0f0f; color:#f5f5f5; border:1px solid #2a2a2a; }
+      .float-card .t2{ color:#cfcfcf; }
+      .nav{ border-bottom-color: rgba(250,204,21,0.9); }
+    }
   </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Ga naar inhoud</a>
 
-  <!-- NAV -->
   <nav class="nav" aria-label="Hoofdnavigatie">
     <div class="container">
       <div class="nav-inner">
-        <div class="brand" role="banner" aria-label="BIJ1 Zuidoost">
+        <a class="brand" href="#home" data-scroll="home" aria-label="BIJ1 Zuidoost">
           <span class="bij1">BIJ1</span>
           <span>ZUIDOOST</span>
-        </div>
+        </a>
 
         <div class="nav-links" role="navigation" aria-label="Navigatie links">
           <a class="nav-link" href="#home" data-scroll="home">Start</a>
@@ -670,54 +678,33 @@
     </div>
   </nav>
 
-  <main id="main" role="main">
-    <!-- HERO -->
+  <main id="main">
     <header id="home" class="hero">
       <div class="container">
         <div class="hero-grid">
           <div>
             <div class="badge" aria-label="Verkiezingsdatum">📅 18 maart 2026</div>
-
             <h1>
               Gelijke stad.<br />
               <span class="accent">Gelijke standaard.</span>
             </h1>
-
             <p>Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren.</p>
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="#plannen" data-scroll="plannen">Bekijk mijn prioriteiten →</a>
-              <a class="btn btn-ghost" href="#stemmen" data-scroll="stemmen">Mag ik stemmen?</a>
+              <a class="btn btn-secondary" href="#stemmen" data-scroll="stemmen">Mag jij stemmen? →</a>
 
               <div class="pill" aria-label="Kandidaat informatie">
                 <div class="small">Kandidaat</div>
                 <div class="big">Fabian Vroom</div>
               </div>
             </div>
-
-            <div class="kpis" aria-label="Samenvatting">
-              <div class="kpi">
-                <div class="k">Stadsdeelcommissie</div>
-                <div class="v">Kandidaat · #3 op lijst BIJ1</div>
-              </div>
-              <div class="kpi">
-                <div class="k">Gemeenteraad</div>
-                <div class="v">Kandidaat · #12 op lijst BIJ1</div>
-              </div>
-            </div>
           </div>
 
           <div style="position:relative">
             <div class="portrait" aria-label="Portret">
-              <img
-                src="assets/fabian.jpg"
-                alt="Fabian Vroom"
-                loading="eager"
-                decoding="async"
-                width="1024"
-                height="1280"
-                onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';"
-              />
+              <img src="assets/fabian.jpg" alt="Fabian Vroom" loading="eager"
+                   onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';" />
               <div class="fallback" id="fallback">Foto Fabian Vroom</div>
             </div>
 
@@ -730,52 +717,40 @@
       </div>
     </header>
 
-    <!-- OVER MIJ -->
     <section id="over-mij" class="section">
       <div class="container">
         <h2>Trambestuurder in de <span style="text-decoration: underline; text-decoration-thickness:4px; text-underline-offset:6px; text-decoration-color: var(--yellow);">stadsdeelcommissie</span></h2>
-        <p class="lead">Wat ik zie in de praktijk, hoe ik het vertaal naar afspraken, en hoe jij dat kunt terugzien in resultaat.</p>
+        <p class="lead">Wat ik dagelijks zie in de stad, en hoe ik dat omzet in uitvoering.</p>
 
-        <div class="quote">"Luisteren is de start. Uitvoeren de norm."</div>
+        <div class="quote">"Mijn principe is simpel: luisteren is de start, uitvoeren de norm."</div>
 
         <div class="two-col">
           <div class="card">
             <h3>De werkvloer</h3>
             <p>
-              Ik ben Fabian Vroom. Ik werk als trambestuurder bij GVB. Vanuit de tramcabine zie ik de stad in beweging:
-              mensen naar school, werk, zorg en naar huis.
+              Ik ben Fabian Vroom. In het dagelijks leven werk ik als trambestuurder bij GVB. Vanuit de tramcabine zie ik de stad in beweging: school, werk, zorg, het leven. In gesprekken hoor ik wat er speelt, en ik zie waar plannen in de praktijk landen.
             </p>
             <p>
-              Ik luister naar wat mensen meemaken en let op waar plannen in de praktijk vastlopen.
-              Mijn uitgangspunt is simpel: afspraken moeten uitvoerbaar zijn en bewoners moeten het resultaat kunnen merken.
-            </p>
-            <p>
-              Naast mijn werk ben ik voorzitter van Keti Koti Verb!ndt, een personeelsinitiatief binnen GVB.
-              Daar werk ik aan verbinding, bewustwording rond geschiedenis en cultuur, en sociale veiligheid op de werkvloer.
+              Dat is mijn uitgangspunt: afspraken moeten uitvoerbaar zijn en bewoners moeten het resultaat kunnen merken. Naast mijn werk ben ik voorzitter van Keti Koti Verb!ndt, een personeelsinitiatief binnen GVB. Daar werk ik aan verbinding, bewustwording rond geschiedenis en cultuur, en sociale veiligheid op de werkvloer.
             </p>
           </div>
 
           <div class="card">
             <h3>Mijn kompas</h3>
             <p>
-              Sinds mijn 23e woon ik in Amsterdam Zuidoost, na mijn komst vanuit Suriname.
-              Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt. Twee jaar sliep ik op banken bij anderen.
-              Daarna huurde ik zes jaar in onderhuur, met weinig zekerheid. In 2018 kreeg ik weer een woning op mijn naam.
+              Sinds mijn 23e woon ik in Amsterdam Zuidoost, na mijn komst vanuit Suriname. In 2010 raakte ik mijn woning kwijt. Twee jaar sliep ik op banken bij anderen. Daarna huurde ik zes jaar in onderhuur, met weinig zekerheid. In 2018 kreeg ik weer een woning op mijn naam.
             </p>
             <p>
-              Die ervaring maakt mijn lijn helder: bestaanszekerheid en veiligheid zijn basis.
-              Ik ben ook basketballer. Sport vraagt discipline en bouwt verbinding. Jongeren verdienen die ruimte om te groeien.
+              Die ervaring maakt mijn lijn helder: bestaanszekerheid en veiligheid zijn basis. Ik ben ook basketballer. Sport vraagt discipline en geeft verbinding. Die lijn trek ik door naar Zuidoost: jongeren hebben ruimte nodig, buurthuizen zijn sociale infrastructuur, bewoners verdienen zeggenschap die echt iets betekent.
             </p>
             <p>
-              Ik stel me kandidaat omdat ik politiek wil koppelen aan uitvoering die je kunt controleren:
-              heldere normen, heldere afspraken, en consequent advies als plannen niet voldoen aan wat bewoners nodig hebben.
+              Ik stel me kandidaat om politiek te koppelen aan controleerbare uitvoering: heldere normen, heldere afspraken, consequent advies als plannen niet voldoen aan wat bewoners nodig hebben.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PLAN -->
     <section id="plannen" class="section alt">
       <div class="container">
         <div class="plan-header">
@@ -788,20 +763,20 @@
             <div class="num">1</div>
             <h3>Jongeren</h3>
             <ul class="bullets">
-              <li><strong>Ruimte:</strong> jongeren hebben recht op hun plek. Sport bouwt zelfvertrouwen en verbinding.</li>
-              <li><strong>Sport:</strong> hoogwaardige openbare sportplekken die veilig zijn, tot 22.00 uur goed verlicht en toegankelijk.</li>
-              <li><strong>Wonen:</strong> negatief advies op bouwplannen zonder harde afspraken over stadsdeelvoorrang. Waar mogelijk: maximale 25% voor bewoners met aantoonbare binding met Zuidoost in projectafspraken die meetellen bij woningtoewijzing.</li>
+              <li><strong>Ruimte:</strong> jongeren hebben recht op hun plek.</li>
+              <li><strong>Sport:</strong> openbare sportplekken die veilig zijn, tot 22.00 uur goed verlicht en toegankelijk voor iedereen.</li>
+              <li><strong>Wonen:</strong> maximaal gebruik van mijn adviesrecht. Negatief advies op bouwplannen zonder harde afspraken over stadsdeelvoorrang. Waar stadsdeelvoorrang mogelijk is: maximaal 25% vastleggen voor bewoners met aantoonbare binding met Zuidoost in projectafspraken die meetellen bij de woningtoewijzing.</li>
             </ul>
-            <div class="plan-note">Ik beloof geen veto. Ik beloof een heldere lijn: zonder harde afspraak over die 25% is mijn advies nee.</div>
+            <div class="plan-note">Zonder harde afspraak over die 25% is mijn advies nee.</div>
           </article>
 
           <article class="plan-card">
             <div class="num">2</div>
             <h3>Buurthuizen</h3>
             <ul class="bullets">
-              <li><strong>Status:</strong> sociale infrastructuur. Huiswerk, cultuur en ontmoeting maken de wijk sterker en veiliger.</li>
+              <li><strong>Status:</strong> sociale infrastructuur. Huiswerkbegeleiding, sport en ontmoeting maken de wijk sterker en veiliger.</li>
               <li><strong>Toegang:</strong> zeven dagen per week open, tot 22.00 uur.</li>
-              <li><strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering; de gemeente zorgt voor continuïteit.</li>
+              <li><strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering. De gemeente zorgt voor continuïteit.</li>
             </ul>
             <div class="plan-note">Wat we in heel Amsterdam als standaard vastleggen, moet ook in Zuidoost voelbaar zijn.</div>
           </article>
@@ -810,17 +785,16 @@
             <div class="num">3</div>
             <h3>Zeggenschap</h3>
             <ul class="bullets">
-              <li><strong>Richting:</strong> kansen mogen niet afhangen van je postcode. Bewoners verdienen invloed en eerlijke kansen.</li>
-              <li><strong>Kwaliteit:</strong> meetbare normen voor onderhoud en veiligheid, gebaseerd op data en meldingen, met preventief onderhoud.</li>
-              <li><strong>Budget:</strong> wijkbudget van <strong>€ 50.000 per jaar</strong>, met mandaat voor bewoners over besteding in hun eigen straat.</li>
+              <li><strong>Richting:</strong> kansen mogen niet afhangen van je postcode.</li>
+              <li><strong>Kwaliteit:</strong> meetbare normen voor onderhoud en veiligheid, gebaseerd op data en meldingen van bewoners, met preventief onderhoud.</li>
+              <li><strong>Budget:</strong> wijkbudget van <strong>€ 50.000 per jaar</strong>, met mandaat voor bewoners over de besteding in hun eigen straat.</li>
             </ul>
-            <div class="plan-note">De buurt is geen decor. De buurt is de opdrachtgever.</div>
+            <div class="plan-note">De buurt is de opdrachtgever.</div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- WAAROM BIJ1 -->
     <section class="why" aria-label="Waarom BIJ1">
       <div class="container">
         <div class="why-grid">
@@ -840,32 +814,36 @@
       </div>
     </section>
 
-    <!-- STEMINFO -->
     <section id="stemmen" class="stem" aria-label="Stem informatie">
       <div class="container">
         <div class="stem-box">
-          <h3><span class="label">Info</span>Mag jij stemmen?</h3>
+          <h3><span class="label">Info</span>Mag jij stemmen op 18 maart 2026?</h3>
 
           <div class="stem-grid">
             <div class="stem-card">
-              <h4>Leeftijd</h4>
+              <h4>Stadsdeelcommissie</h4>
               <ul>
-                <li>Vanaf <strong>16 jaar</strong>: stemmen voor de stadsdeelcommissie.</li>
-                <li>Vanaf <strong>18 jaar</strong>: stemmen voor de gemeenteraad.</li>
+                <li>Leeftijd: <strong>16+</strong></li>
+                <li>Nederlandse nationaliteit: ja</li>
+                <li>EU-nationaliteit: ja</li>
+                <li>Geen EU-nationaliteit: <strong>2 jaar</strong> onafgebroken ingeschreven in Nederland</li>
               </ul>
             </div>
 
             <div class="stem-card">
-              <h4>Nationaliteit</h4>
+              <h4>Gemeenteraad</h4>
               <ul>
-                <li>Met een EU-nationaliteit: je mag stemmen.</li>
-                <li>Zonder EU-nationaliteit: je mag stemmen als je minimaal <strong>5 jaar legaal</strong> in Nederland woont.</li>
+                <li>Leeftijd: <strong>18+</strong></li>
+                <li>Nederlandse nationaliteit: ja</li>
+                <li>EU-nationaliteit: ja</li>
+                <li>Geen EU-nationaliteit: <strong>5 jaar</strong> onafgebroken ingeschreven in Nederland</li>
               </ul>
             </div>
           </div>
 
           <p class="stem-note">
             Gemeenteraadsverkiezingen (18 maart 2026): <strong>BIJ1 is lijst 5</strong>.
+            <a href="https://www.amsterdam.nl/bestuur-organisatie/verkiezingen/stemmen/" target="_blank" rel="noopener">Officiële steminformatie</a>.
           </p>
 
           <div class="stem-extra" aria-label="Slotstuk: politiek die je kunt controleren">
@@ -876,7 +854,7 @@
               We luisteren. We erkennen. We herstellen.
             </p>
 
-            <p class="line">Jij bent geen toeschouwer. Jij bent participant.</p>
+            <p class="line">Jij bent participant.</p>
 
             <ol class="stem-questions">
               <li>Wat wil jij als eerste zien veranderen in jouw buurt als bewijs dat je serieus genomen wordt?</li>
@@ -895,7 +873,6 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <h2>POLITIEK DIE JE KUNT <span class="accent">CONTROLEREN</span></h2>
@@ -924,9 +901,16 @@
       mobileMenu.hidden = !open;
       menuBtn.textContent = open ? '✕' : '☰';
       document.body.style.overflow = open ? "hidden" : "";
+
+      if(open){
+        const first = mobileMenu.querySelector('a');
+        first && first.focus();
+      } else {
+        menuBtn.focus();
+      }
     }
 
-    menuBtn?.addEventListener('click', () => {
+    menuBtn && menuBtn.addEventListener('click', () => {
       const open = menuBtn.getAttribute('aria-expanded') !== 'true';
       setMenu(open);
     });
@@ -957,6 +941,7 @@
       link.addEventListener('click', (e) => {
         const id = e.currentTarget.getAttribute('data-scroll');
         if(!id) return;
+
         e.preventDefault();
         scrollToId(id);
         setMenu(false);
@@ -968,4 +953,4 @@
     });
   </script>
 </body>
-          </html>
+</html>
