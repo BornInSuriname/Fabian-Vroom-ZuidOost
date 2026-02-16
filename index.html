@@ -8,41 +8,41 @@
   <!-- SEO -->
   <meta name="description" content="Gelijke stad, gelijke standaard. Fabian Vroom – BIJ1, kandidaat Stadsdeelcommissie Amsterdam Zuidoost. Verkiezingen: 18 maart 2026." />
   <meta name="robots" content="index,follow" />
-  <!-- TODO: zet hier je echte live URL -->
   <link rel="canonical" href="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/" />
 
-  <!-- Social / Open Graph -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost" />
   <meta property="og:description" content="Resultaat in uitvoering dat je kunt controleren. Verkiezingen: 18 maart 2026." />
-  <!-- TODO: zet hier je echte live URL -->
-  <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/og-image.jpg" />
-  <!-- TODO: gebruik bij voorkeur een absolute URL naar je OG image -->
-  <meta property="og:image" content="og-image.jpg" />
+  <meta property="og:url" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/" />
+  <meta property="og:image" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Fabian Vroom – BIJ1 Amsterdam Zuidoost" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fabian Vroom · BIJ1 Amsterdam Zuidoost" />
   <meta name="twitter:description" content="Resultaat in uitvoering dat je kunt controleren. Verkiezingen: 18 maart 2026." />
-  <meta name="twitter:image" content="og-image.jpg" />
+  <meta name="twitter:image" content="https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/og-image.jpg" />
 
   <!-- UI -->
   <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="color-scheme" content="light" />
 
-  <!-- (Optioneel) preload van je portret -->
+  <!-- Preload portret -->
   <link rel="preload" as="image" href="assets/fabian.jpg" />
 
-  <!-- Structured data (basis) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Fabian Vroom",
     "description": "Kandidaat Stadsdeelcommissie Amsterdam Zuidoost (BIJ1).",
-    "image": "assets/fabian.jpg"
+    "image": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/assets/fabian.jpg",
+    "url": "https://borninsuriname.github.io/Fabian-Vroom-ZuidOost/"
   }
   </script>
 
@@ -54,10 +54,13 @@
       --muted2:#a3a3a3;
       --black:#000;
       --white:#fff;
-      --yellow:#facc15; /* BIJ1-achtig geel */
+      --yellow:#facc15;
       --border:#e5e5e5;
       --max: 1100px;
 
+      --r-sm: 6px;
+      --r-md: 10px;
+      --shadow: 0 12px 30px rgba(0,0,0,0.08);
       --focus: 0 0 0 3px rgba(250,204,21,0.55);
     }
 
@@ -68,16 +71,19 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
     ::selection{ background: var(--yellow); color: var(--black); }
-
-    /* hidden moet altijd echt weg zijn */
     [hidden]{ display:none !important; }
 
     a{ color:inherit; text-decoration:none; }
     button{ font:inherit; cursor:pointer; }
     .container{ max-width: var(--max); margin:0 auto; padding:0 18px; }
+
+    p{ margin:0 0 14px; }
+    p:last-child{ margin-bottom:0; }
 
     /* A11Y */
     .skip-link{
@@ -100,11 +106,12 @@
       z-index:999;
       outline:none;
       box-shadow: var(--focus);
+      border-radius: var(--r-sm);
     }
     :focus-visible{
       outline:none;
       box-shadow: var(--focus);
-      border-radius: 6px;
+      border-radius: var(--r-sm);
     }
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior:auto; }
@@ -130,7 +137,7 @@
       display:flex;
       align-items:center;
       gap:10px;
-      font-weight:800;
+      font-weight:900;
       letter-spacing:-0.02em;
       user-select:none;
       white-space:nowrap;
@@ -141,7 +148,7 @@
       display:flex;
       align-items:center;
       gap:22px;
-      font-weight:600;
+      font-weight:700;
     }
     .nav-link{
       display:inline-flex;
@@ -156,13 +163,13 @@
       color:var(--black);
       border:0;
       padding:10px 14px;
-      font-weight:900;
+      font-weight:950;
       text-transform:uppercase;
       letter-spacing:0.06em;
       font-size:12px;
       display:inline-flex;
       align-items:center;
-      border-radius: 4px;
+      border-radius: var(--r-sm);
     }
     .nav-cta:hover{ background:var(--white); }
 
@@ -172,7 +179,7 @@
       border:0;
       color:var(--white);
       padding:10px;
-      border-radius: 6px;
+      border-radius: var(--r-sm);
     }
 
     .mobile-menu{
@@ -193,12 +200,15 @@
       text-align:left;
       color:var(--white);
       padding:12px 18px;
-      font-weight:800;
+      font-weight:900;
     }
     .mobile-menu a:hover{ background:#1f1f1f; }
     .mobile-menu .cta{ color:var(--yellow); }
 
     /* HERO */
+    main{ display:block; }
+    section{ scroll-margin-top: 86px; }
+
     .hero{
       padding: 120px 0 76px;
       background:var(--black);
@@ -231,14 +241,15 @@
       background:var(--yellow);
       color:var(--black);
       padding:6px 10px;
-      font-weight:900;
+      font-weight:950;
       text-transform:uppercase;
       letter-spacing:0.12em;
       font-size:12px;
       margin-bottom:18px;
+      border-radius: var(--r-sm);
     }
     .hero h1{
-      margin:0 0 16px;
+      margin:0 0 14px;
       font-weight:950;
       letter-spacing:-0.04em;
       line-height:0.95;
@@ -246,11 +257,11 @@
     }
     .hero h1 .accent{ color:var(--yellow); }
     .hero p{
-      margin:0 0 24px;
+      margin:0 0 22px;
       color:#d4d4d4;
       font-size: clamp(18px, 2vw, 22px);
-      max-width: 560px;
-      font-weight:350;
+      max-width: 600px;
+      font-weight:380;
     }
     .hero-actions{
       display:flex;
@@ -262,7 +273,7 @@
     .btn{
       border:0;
       padding:14px 18px;
-      font-weight:900;
+      font-weight:950;
       font-size:16px;
       display:inline-flex;
       align-items:center;
@@ -270,10 +281,17 @@
       gap:10px;
       transition: transform .15s ease, background .15s ease;
       user-select:none;
-      border-radius: 4px;
+      border-radius: var(--r-sm);
     }
     .btn-primary{ background:var(--yellow); color:var(--black); }
     .btn-primary:hover{ background:var(--white); transform: translateY(-1px); }
+    .btn-ghost{
+      background:transparent;
+      color:var(--white);
+      border:1px solid rgba(255,255,255,0.22);
+    }
+    .btn-ghost:hover{ border-color: rgba(250,204,21,0.65); color: var(--yellow); }
+
     .pill{
       border:1px solid rgba(255,255,255,0.2);
       padding:12px 16px;
@@ -281,10 +299,26 @@
       display:flex;
       flex-direction:column;
       justify-content:center;
-      border-radius: 4px;
+      border-radius: var(--r-sm);
     }
     .pill .small{ color:#a3a3a3; text-transform:uppercase; letter-spacing:0.08em; font-size:11px; }
-    .pill .big{ font-weight:900; font-size:18px; margin-top:2px; }
+    .pill .big{ font-weight:950; font-size:18px; margin-top:2px; }
+
+    .kpis{
+      margin-top: 14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .kpi{
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 12px;
+      border-radius: var(--r-sm);
+      min-width: 180px;
+    }
+    .kpi .k{ color:#a3a3a3; text-transform:uppercase; letter-spacing:0.10em; font-size:11px; }
+    .kpi .v{ margin-top:4px; font-weight:950; }
 
     .portrait{
       position:relative;
@@ -293,6 +327,7 @@
       border:2px solid var(--yellow);
       overflow:hidden;
       box-shadow: 10px 10px 0 0 rgba(250,204,21,1);
+      border-radius: var(--r-md);
     }
     .portrait img{
       width:100%;
@@ -300,16 +335,17 @@
       object-fit:cover;
       display:block;
     }
+    /* FIX: fallback niet standaard zichtbaar */
     .portrait .fallback{
       position:absolute;
       inset:0;
-      display:flex;
+      display:none;
       align-items:center;
       justify-content:center;
       padding:32px;
       text-align:center;
       color:#a3a3a3;
-      font-weight:900;
+      font-weight:950;
       text-transform:uppercase;
       letter-spacing:0.12em;
       font-size:12px;
@@ -323,63 +359,61 @@
       padding:12px 14px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
       max-width: 260px;
-      border-radius: 4px;
+      border-radius: var(--r-sm);
     }
-    .float-card .t1{ font-weight:900; font-size:13px; }
+    .float-card .t1{ font-weight:950; font-size:13px; }
     .float-card .t2{ color:#525252; font-size:12px; margin-top:2px; }
 
     /* SECTIONS */
-    main{ display:block; }
-    section{ scroll-margin-top: 86px; }
-
     .section{
       padding: 76px 0;
       background:var(--white);
     }
     .section.alt{ background:#f5f5f5; }
     .section h2{
-      margin:0 0 12px;
+      margin:0 0 10px;
       font-size: clamp(28px, 3vw, 40px);
       letter-spacing:-0.02em;
     }
     .section .lead{
       font-size: 18px;
       color: var(--muted);
-      margin: 0 0 28px;
-      max-width: 760px;
+      margin: 0 0 26px;
+      max-width: 780px;
     }
     .quote{
-      margin: 22px 0 34px;
+      margin: 22px 0 30px;
       border-left:4px solid var(--black);
       padding: 10px 0 10px 16px;
       font-size: 18px;
       color:#404040;
-      font-weight:650;
+      font-weight:800;
     }
 
     .two-col{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      gap: 22px;
       margin-top: 18px;
     }
     .card{
       background:var(--white);
       border:1px solid var(--border);
       padding: 22px;
-      border-radius: 4px;
+      border-radius: var(--r-md);
+      box-shadow: 0 0 0 rgba(0,0,0,0);
     }
     .card h3{
       margin:0 0 10px;
       font-size: 18px;
       letter-spacing:-0.01em;
     }
-    .card p{ margin:0; color:#404040; }
+    .card p{ color:#404040; }
 
     /* PLAN */
     .plan-header{
       text-align:center;
-      max-width: 780px;
+      max-width: 820px;
       margin:0 auto 34px;
     }
     .plan-grid{
@@ -389,15 +423,13 @@
     }
     .plan-card{
       background:var(--white);
-      border-bottom: 4px solid var(--black);
+      border: 1px solid var(--border);
+      border-bottom: 5px solid var(--black);
       padding: 22px;
-      border-left: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-top: 1px solid var(--border);
       transition: transform .12s ease, box-shadow .12s ease;
-      border-radius: 4px;
+      border-radius: var(--r-md);
     }
-    .plan-card:hover{ transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+    .plan-card:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
     .num{
       width:44px; height:44px;
       border-radius:999px;
@@ -423,8 +455,8 @@
       margin-top: 12px;
       padding-top: 12px;
       border-top: 1px solid var(--border);
-      color:#404040;
-      font-weight:700;
+      color:#111;
+      font-weight:900;
     }
 
     /* WHY */
@@ -445,7 +477,7 @@
       margin:0;
       padding-left: 18px;
       color:#e5e5e5;
-      font-weight:600;
+      font-weight:700;
     }
     .why li{ margin: 10px 0; }
 
@@ -462,7 +494,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.28);
       position:relative;
       overflow:hidden;
-      border-radius: 6px;
+      border-radius: var(--r-md);
     }
     .stem-box .label{
       display:inline-block;
@@ -475,6 +507,7 @@
       padding: 6px 8px;
       margin-right: 10px;
       vertical-align:middle;
+      border-radius: var(--r-sm);
     }
     .stem-box h3{
       margin:0 0 18px;
@@ -491,7 +524,7 @@
       border:1px solid rgba(250,204,21,0.25);
       padding: 14px 16px;
       background: rgba(255,255,255,0.04);
-      border-radius: 6px;
+      border-radius: var(--r-md);
     }
     .stem-card h4{
       margin:0 0 8px;
@@ -503,19 +536,15 @@
     }
     .stem-card ul{ margin:0; padding-left: 18px; color:#e5e5e5; }
     .stem-card li{ margin: 8px 0; }
+
     .stem-note{
       margin-top: 14px;
       color:#d4d4d4;
       font-size: 13px;
       line-height: 1.45;
     }
-    .stem-note a{
-      color: var(--yellow);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
 
-    /* STEM-EXTRA (slotstuk) */
+    /* STEM-EXTRA */
     .stem-extra{
       margin-top: 16px;
       padding-top: 14px;
@@ -529,29 +558,26 @@
       font-size: 12px;
       margin: 0 0 10px;
     }
-    .stem-extra p{
-      margin: 0 0 10px;
-      color: #e5e5e5;
-    }
     .stem-extra .line{
       color: #d4d4d4;
-      font-weight: 700;
+      font-weight: 800;
+      margin: 0 0 10px;
     }
     .stem-questions{
       margin: 10px 0 0;
       padding-left: 18px;
       color: #ffffff;
-      font-weight: 700;
+      font-weight: 800;
     }
     .stem-questions li{
       margin: 10px 0;
       color: #e5e5e5;
-      font-weight: 650;
+      font-weight: 700;
     }
     .stem-extra .closing{
       margin-top: 12px;
       color: #d4d4d4;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     /* FOOTER */
@@ -569,7 +595,7 @@
       font-weight:950;
     }
     footer h2 .accent{ color:var(--yellow); }
-    footer .sub{ margin:0 0 26px; color:#d4d4d4; font-size: 18px; font-weight:350; }
+    footer .sub{ margin:0 0 26px; color:#d4d4d4; font-size: 18px; font-weight:380; }
 
     .footer-box{
       display:inline-block;
@@ -578,36 +604,14 @@
       background: rgba(255,255,255,0.04);
       text-align:left;
       max-width: 520px;
-      border-radius: 6px;
+      border-radius: var(--r-md);
     }
     .footer-box .name{ font-weight:950; font-size: 18px; }
     .footer-box .meta{ color:#bdbdbd; margin-top:2px; }
     .footer-box .date{ color:var(--yellow); margin-top:10px; font-weight:950; }
 
-    /* FOOTER - accountability */
-    .footer-ctrl{
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid #262626;
-    }
-    .footer-kicker{
-      color: var(--yellow);
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
-      font-size: 12px;
-      margin: 0 0 8px;
-    }
-    .footer-qs{
-      margin: 0;
-      padding-left: 18px;
-      color: #e5e5e5;
-      font-weight: 650;
-    }
-    .footer-qs li{ margin: 10px 0; }
-
     .copy{
-      margin-top: 36px;
+      margin-top: 24px;
       padding-top: 18px;
       border-top: 1px solid #262626;
       color:#a3a3a3;
@@ -650,7 +654,7 @@
           <a class="nav-cta" href="#stemmen" data-scroll="stemmen">Stem info</a>
         </div>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Menu openen" aria-expanded="false" type="button">
+        <button class="menu-btn" id="menuBtn" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu" type="button">
           ☰
         </button>
       </div>
@@ -666,35 +670,54 @@
     </div>
   </nav>
 
-  <main id="main">
+  <main id="main" role="main">
     <!-- HERO -->
     <header id="home" class="hero">
       <div class="container">
         <div class="hero-grid">
           <div>
             <div class="badge" aria-label="Verkiezingsdatum">📅 18 maart 2026</div>
+
             <h1>
               Gelijke stad.<br />
               <span class="accent">Gelijke standaard.</span>
             </h1>
+
             <p>Zuidoost telt mee. Resultaat in uitvoering dat je kunt controleren.</p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#plannen" data-scroll="plannen">Bekijk mijn prioriteiten→</a>
+              <a class="btn btn-primary" href="#plannen" data-scroll="plannen">Bekijk mijn prioriteiten →</a>
+              <a class="btn btn-ghost" href="#stemmen" data-scroll="stemmen">Mag ik stemmen?</a>
 
               <div class="pill" aria-label="Kandidaat informatie">
                 <div class="small">Kandidaat</div>
                 <div class="big">Fabian Vroom</div>
               </div>
             </div>
+
+            <div class="kpis" aria-label="Samenvatting">
+              <div class="kpi">
+                <div class="k">Stadsdeelcommissie</div>
+                <div class="v">Kandidaat · #3 op lijst BIJ1</div>
+              </div>
+              <div class="kpi">
+                <div class="k">Gemeenteraad</div>
+                <div class="v">BIJ1 is lijst 5</div>
+              </div>
+            </div>
           </div>
 
           <div style="position:relative">
             <div class="portrait" aria-label="Portret">
-              <!-- Plaats je eigen foto in dezelfde map als dit HTML-bestand -->
-              <!-- Voorbeeld: assets/fabian.jpg -->
-              <img src="assets/fabian.jpg" alt="Fabian Vroom" loading="eager"
-                   onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';" />
+              <img
+                src="assets/fabian.jpg"
+                alt="Fabian Vroom"
+                loading="eager"
+                decoding="async"
+                width="1024"
+                height="1280"
+                onerror="this.style.display='none'; document.getElementById('fallback').style.display='flex';"
+              />
               <div class="fallback" id="fallback">Foto Fabian Vroom</div>
             </div>
 
@@ -711,18 +734,24 @@
     <section id="over-mij" class="section">
       <div class="container">
         <h2>Trambestuurder in de <span style="text-decoration: underline; text-decoration-thickness:4px; text-underline-offset:6px; text-decoration-color: var(--yellow);">stadsdeelcommissie</span></h2>
-        <p class="lead">De basis: wat ik dagelijks zie in de stad, en hoe ik dat omzet in actie.</p>
+        <p class="lead">Wat ik zie in de praktijk, hoe ik het vertaal naar afspraken, en hoe jij dat kunt terugzien in resultaat.</p>
 
-        <div class="quote">"Mijn principe is simpel: luisteren is de start, uitvoeren de norm."</div>
+        <div class="quote">"Luisteren is de start. Uitvoeren de norm."</div>
 
         <div class="two-col">
           <div class="card">
             <h3>De werkvloer</h3>
             <p>
-              Ik ben Fabian Vroom. In het dagelijks leven werk ik als trambestuurder bij GVB. Vanuit de tramcabine zie ik de stad in beweging: mensen gaan naar school, werk, zorg en naar huis. In gesprekken en verhalen hoor ik wat er speelt, en ik zie waar plannen in de praktijk landen. 
-              Dat is mijn uitgangspunt: afspraken moeten uitvoerbaar zijn en bewoners moeten het resultaat kunnen merken.
-              Naast mijn werk ben ik voorzitter van Keti Koti Verb!ndt, een personeelsinitiatief binnen GVB. Daar werk ik aan verbinding, bewustwording rond geschiedenis en cultuur, en sociale veiligheid op de werkvloer. 
-              Voor mij hoort dat bij goed bestuur: mensen moeten zich veilig, gezien en serieus genomen voelen.
+              Ik ben Fabian Vroom. Ik werk als trambestuurder bij GVB. Vanuit de tramcabine zie ik de stad in beweging:
+              mensen naar school, werk, zorg en naar huis.
+            </p>
+            <p>
+              Ik luister naar wat mensen meemaken en let op waar plannen in de praktijk vastlopen.
+              Mijn uitgangspunt is simpel: afspraken moeten uitvoerbaar zijn en bewoners moeten het resultaat kunnen merken.
+            </p>
+            <p>
+              Naast mijn werk ben ik voorzitter van Keti Koti Verb!ndt, een personeelsinitiatief binnen GVB.
+              Daar werk ik aan verbinding, bewustwording rond geschiedenis en cultuur, en sociale veiligheid op de werkvloer.
             </p>
           </div>
 
@@ -732,13 +761,15 @@
               Sinds mijn 23e woon ik in Amsterdam Zuidoost, na mijn komst vanuit Suriname.
               Door verkeerde keuzes raakte ik in 2010 mijn woning kwijt. Twee jaar sliep ik op banken bij anderen.
               Daarna huurde ik zes jaar in onderhuur, met weinig zekerheid. In 2018 kreeg ik weer een woning op mijn naam.
-              Die rust gaf ruimte om te bouwen. Mijn eigen geschiedenis leert mij dat bestaanszekerheid en veiligheid basis zijn.
-              Ik ben ook basketballer. Sport geeft zelfvertrouwen, discipline en verbinding. 
-              Die lijn trek ik door naar Amsterdam Zuidoost: jongeren hebben ruimte nodig om te bouwen aan zichzelf. Buurthuizen zijn sociale infrastructuur. 
-              En bewoners verdienen zeggenschap die echt iets betekent.
             </p>
-            <p>Ik stel me kandidaat omdat ik politiek wil koppelen aan uitvoering die je kunt controleren. 
-              Heldere normen, heldere afspraken, en consequent advies als plannen niet voldoen aan wat bewoners nodig hebben.</p>
+            <p>
+              Die ervaring maakt mijn lijn helder: bestaanszekerheid en veiligheid zijn basis.
+              Ik ben ook basketballer. Sport vraagt discipline en bouwt verbinding. Jongeren verdienen die ruimte om te groeien.
+            </p>
+            <p>
+              Ik stel me kandidaat omdat ik politiek wil koppelen aan uitvoering die je kunt controleren:
+              heldere normen, heldere afspraken, en consequent advies als plannen niet voldoen aan wat bewoners nodig hebben.
+            </p>
           </div>
         </div>
       </div>
@@ -757,9 +788,9 @@
             <div class="num">1</div>
             <h3>Jongeren</h3>
             <ul class="bullets">
-              <li><strong>Ruimte:</strong> Jongeren hebben recht op hun plek. Als basketballer weet ik dat sport zelfvertrouwen geeft en verbindt.</li>
-              <li><strong>Sport:</strong> Ik ga voor hoogwaardige openbare sportplekken die veilig zijn, tot 22.00 uur goed verlicht en toegankelijk voor iedereen.</li>
-              <li><strong>Wonen:</strong> Ik gebruik mijn adviesrecht maximaal en geef negatief advies op bouwplannen zonder harde afspraken over stadsdeelvoorrang. Waar stadsdeelvoorrang mogelijk is, leg ik de maximale 25% vast voor bewoners met aantoonbare binding met Zuidoost (bijvoorbeeld via woonduur) in projectafspraken die meetellen bij de woningtoewijzing.</li>
+              <li><strong>Ruimte:</strong> jongeren hebben recht op hun plek. Sport bouwt zelfvertrouwen en verbinding.</li>
+              <li><strong>Sport:</strong> hoogwaardige openbare sportplekken die veilig zijn, tot 22.00 uur goed verlicht en toegankelijk.</li>
+              <li><strong>Wonen:</strong> negatief advies op bouwplannen zonder harde afspraken over stadsdeelvoorrang. Waar mogelijk: maximale 25% voor bewoners met aantoonbare binding met Zuidoost in projectafspraken die meetellen bij woningtoewijzing.</li>
             </ul>
             <div class="plan-note">Ik beloof geen veto. Ik beloof een heldere lijn: zonder harde afspraak over die 25% is mijn advies nee.</div>
           </article>
@@ -768,7 +799,7 @@
             <div class="num">2</div>
             <h3>Buurthuizen</h3>
             <ul class="bullets">
-              <li><strong>Status:</strong> Buurthuizen zijn sociale infrastructuur, net zo noodzakelijk als wegen en verlichting. Huiswerkbegeleiding, sport en ontmoeting maken de wijk sterker en veiliger.</li>
+              <li><strong>Status:</strong> sociale infrastructuur. Huiswerk, sport en ontmoeting maken de wijk sterker en veiliger.</li>
               <li><strong>Toegang:</strong> zeven dagen per week open, tot 22.00 uur.</li>
               <li><strong>Inhoud:</strong> bewoners en lokale initiatieven bepalen de programmering; de gemeente zorgt voor continuïteit.</li>
             </ul>
@@ -780,8 +811,8 @@
             <h3>Zeggenschap</h3>
             <ul class="bullets">
               <li><strong>Richting:</strong> kansen mogen niet afhangen van je postcode. Bewoners verdienen invloed en eerlijke kansen.</li>
-              <li><strong>Kwaliteit:</strong> meetbare normen voor onderhoud en veiligheid, gebaseerd op data en meldingen van bewoners, met preventief onderhoud.</li>
-              <li><strong>Budget:</strong> wijkbudget van <strong>€ 50.000 per jaar</strong>, met mandaat voor bewoners over de besteding in hun eigen straat.</li>
+              <li><strong>Kwaliteit:</strong> meetbare normen voor onderhoud en veiligheid, gebaseerd op data en meldingen, met preventief onderhoud.</li>
+              <li><strong>Budget:</strong> wijkbudget van <strong>€ 50.000 per jaar</strong>, met mandaat voor bewoners over besteding in hun eigen straat.</li>
             </ul>
             <div class="plan-note">De buurt is geen decor. De buurt is de opdrachtgever.</div>
           </article>
@@ -833,7 +864,10 @@
             </div>
           </div>
 
-          <!-- SLOTSTUK -->
+          <p class="stem-note">
+            Gemeenteraadsverkiezingen (18 maart 2026): <strong>BIJ1 is lijst 5</strong>.
+          </p>
+
           <div class="stem-extra" aria-label="Slotstuk: politiek die je kunt controleren">
             <p class="kicker">Tot slot</p>
 
@@ -861,7 +895,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (upgrade) -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <h2>POLITIEK DIE JE KUNT <span class="accent">CONTROLEREN</span></h2>
@@ -871,6 +905,7 @@
         <div class="name">Fabian Vroom</div>
         <div class="meta">Kandidaat Stadsdeelcommissie Amsterdam Zuidoost · #3 op lijst BIJ1</div>
         <div class="date">18 maart 2026</div>
+      </div>
 
       <div class="copy">© 2026 Fabian Vroom · BIJ1 Amsterdam Zuidoost</div>
     </div>
@@ -879,7 +914,6 @@
   <script>
     'use strict';
 
-    // Smooth scroll + mobile menu (anchors)
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const nav = document.querySelector('.nav');
@@ -892,18 +926,15 @@
       document.body.style.overflow = open ? "hidden" : "";
     }
 
-    // Toggle menu
     menuBtn?.addEventListener('click', () => {
       const open = menuBtn.getAttribute('aria-expanded') !== 'true';
       setMenu(open);
     });
 
-    // Close on Escape
     window.addEventListener('keydown', (e) => {
       if(e.key === 'Escape') setMenu(false);
     });
 
-    // Close when clicking outside menu (mobile)
     window.addEventListener('click', (e) => {
       if(!mobileMenu || mobileMenu.hidden) return;
       const target = e.target;
@@ -912,7 +943,6 @@
       if(!clickedInsideMenu && !clickedMenuBtn) setMenu(false);
     });
 
-    // Smooth scroll with offset for fixed nav
     function scrollToId(id){
       const el = document.getElementById(id);
       if(!el) return;
@@ -927,18 +957,15 @@
       link.addEventListener('click', (e) => {
         const id = e.currentTarget.getAttribute('data-scroll');
         if(!id) return;
-
-        // prevent default anchor jump, use offset scroll
         e.preventDefault();
         scrollToId(id);
         setMenu(false);
       });
     });
 
-    // Close menu when resizing up
     window.addEventListener('resize', () => {
       if(window.innerWidth > 760) setMenu(false);
     });
   </script>
 </body>
-</html>
+          </html>
